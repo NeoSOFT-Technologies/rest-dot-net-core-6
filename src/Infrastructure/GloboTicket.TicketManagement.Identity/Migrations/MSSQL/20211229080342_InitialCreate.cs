@@ -4,7 +4,8 @@ using Microsoft.EntityFrameworkCore.Migrations;
 #nullable disable
 
 namespace GloboTicket.TicketManagement.Identity.Migrations.MSSQL
-{
+{        
+    [ExcludeFromCodeCoverage]
     public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

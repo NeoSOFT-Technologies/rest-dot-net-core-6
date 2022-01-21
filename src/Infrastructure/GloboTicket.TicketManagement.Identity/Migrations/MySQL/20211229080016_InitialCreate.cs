@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace GloboTicket.TicketManagement.Identity.Migrations.MySQL
 {
+    [ExcludeFromCodeCoverage]
     public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
