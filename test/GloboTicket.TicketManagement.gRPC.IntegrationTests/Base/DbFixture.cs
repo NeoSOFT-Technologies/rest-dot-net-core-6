@@ -25,7 +25,7 @@ namespace GloboTicket.TicketManagement.gRPC.IntegrationTests.Base
 
 
             var dbProvider = Environment.GetEnvironmentVariable("dbProvider") != null
-                                ? Environment.GetEnvironmentVariable("dbProvider") : "PGSQL";
+                                ? Environment.GetEnvironmentVariable("dbProvider") : "MSSQL";
             switch (dbProvider)
             {
                 case "MSSQL":
