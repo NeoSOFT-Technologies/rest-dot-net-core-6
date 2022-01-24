@@ -13,7 +13,7 @@ namespace GloboTicket.TicketManagement.Api.Extensions
             {
                 case "MSSQL":
                     services.AddHealthChecks()
-                        .AddSqlServer(configuration["ConnectionStrings1:GloboTicketIdentityConnectionString"], tags: new[] {
+                        .AddSqlServer(configuration["ConnectionStrings:GloboTicketIdentityConnectionString"], tags: new[] {
                             "db",
                             "all"})
                         .AddUrlGroup(new Uri(configuration["API:WeatertherInfo"]), tags: new[] {
@@ -26,11 +26,11 @@ namespace GloboTicket.TicketManagement.Api.Extensions
                         opt.MaximumHistoryEntriesPerEndpoint(60); //maximum history of checks
                         opt.SetApiMaxActiveRequests(1); //api requests concurrency
                         opt.AddHealthCheckEndpoint("API", "/healthz"); //map health check api
-                    }).AddSqlServerStorage(configuration["ConnectionStrings1:GloboTicketHealthCheckConnectionString"]);
+                    }).AddSqlServerStorage(configuration["ConnectionStrings:GloboTicketHealthCheckConnectionString"]);
                     break;
                 case "PGSQL":
                     services.AddHealthChecks()
-                        .AddNpgSql(configuration["ConnectionStrings2:GloboTicketIdentityConnectionString"], tags: new[] {
+                        .AddNpgSql(configuration["ConnectionStrings:GloboTicketIdentityConnectionString"], tags: new[] {
                             "db",
                             "all"})
                         .AddUrlGroup(new Uri(configuration["API:WeatertherInfo"]), tags: new[] {
@@ -43,7 +43,7 @@ namespace GloboTicket.TicketManagement.Api.Extensions
                         opt.MaximumHistoryEntriesPerEndpoint(60); //maximum history of checks
                         opt.SetApiMaxActiveRequests(1); //api requests concurrency
                         opt.AddHealthCheckEndpoint("API", "/healthz"); //map health check api
-                    }).AddPostgreSqlStorage(configuration["ConnectionStrings2:GloboTicketHealthCheckConnectionString"]);
+                    }).AddPostgreSqlStorage(configuration["ConnectionStrings:GloboTicketHealthCheckConnectionString"]);
                     break;
                 case "MySQL":
                     services.AddHealthChecks()
