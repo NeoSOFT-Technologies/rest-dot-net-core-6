@@ -13,7 +13,7 @@ namespace GloboTicket.TicketManagement.Api.Extensions
             {
                 case "MSSQL":
                     services.AddHealthChecks()
-                        .AddSqlServer(configuration["ConnectionStrings:GloboTicketIdentityConnectionString"], tags: new[] {
+                        .AddSqlServer(configuration["ConnectionStrings1:GloboTicketIdentityConnectionString"], tags: new[] {
                             "db",
                             "all"})
                         .AddUrlGroup(new Uri(configuration["API:WeatertherInfo"]), tags: new[] {
@@ -30,7 +30,7 @@ namespace GloboTicket.TicketManagement.Api.Extensions
                     break;
                 case "PGSQL":
                     services.AddHealthChecks()
-                        .AddNpgSql(configuration["ConnectionStrings:GloboTicketIdentityConnectionString"], tags: new[] {
+                        .AddNpgSql(configuration["ConnectionStrings2:GloboTicketIdentityConnectionString"], tags: new[] {
                             "db",
                             "all"})
                         .AddUrlGroup(new Uri(configuration["API:WeatertherInfo"]), tags: new[] {
