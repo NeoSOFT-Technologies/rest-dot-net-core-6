@@ -4,6 +4,9 @@
 ![Give Project Name](https://user-images.githubusercontent.com/92291258/147340550-c0aee501-920d-44b8-b835-97de73c246c1.PNG)
 ![Select database](https://user-images.githubusercontent.com/92291258/147340568-1095b98d-aa45-4742-86f4-d777f900cbac.PNG)
 ![templateInstall](https://user-images.githubusercontent.com/92291258/147443335-59652d3f-de28-4f62-81a4-4370b69d804e.png)
+![Template6 0](https://user-images.githubusercontent.com/87525401/150730745-6d4dcc6d-9d52-46f4-a6d9-3524d33ce8ce.PNG)
+
+
 
 ## MySQL
 ![Create command With MySQL](https://user-images.githubusercontent.com/92291258/147340240-86849092-f585-4266-80e5-3ada133cb3a0.png)
