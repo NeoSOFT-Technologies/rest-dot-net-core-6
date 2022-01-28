@@ -41,7 +41,6 @@ namespace GloboTicket.TicketManagement.gRPC.IntegrationTests.Services.v2
                 {
                     { "Authorization", $"Bearer {AdminUser.Token}" }
                 };
-
             var response = await _client.GetCategoriesListWithEventsQueryAsync(new GetCategoriesListWithEventsQueryRequest(), headers);
             response.ShouldNotBeNull();           
             response.ShouldBeOfType<GetCategoriesListWithEventsQueryResponse>();
