@@ -13,7 +13,7 @@ namespace GloboTicket.TicketManagement.Api.Extensions
             {
                 case "MSSQL":
                     services.AddHealthChecks()
-                        .AddSqlServer(configuration["ConnectionStrings:GloboTicketIdentityConnectionString"], tags: new[] {
+                        .AddSqlServer(configuration["ConnectionStrings2:GloboTicketIdentityConnectionString"], tags: new[] {
                             "db",
                             "all"})
                         .AddUrlGroup(new Uri(configuration["API:WeatertherInfo"]), tags: new[] {
@@ -26,11 +26,11 @@ namespace GloboTicket.TicketManagement.Api.Extensions
                         opt.MaximumHistoryEntriesPerEndpoint(60); //maximum history of checks
                         opt.SetApiMaxActiveRequests(1); //api requests concurrency
                         opt.AddHealthCheckEndpoint("API", "/healthz"); //map health check api
-                    }).AddSqlServerStorage(configuration["ConnectionStrings:GloboTicketHealthCheckConnectionString"]);
+                    }).AddSqlServerStorage(configuration["ConnectionStrings2:GloboTicketHealthCheckConnectionString"]);
                     break;
                 case "PGSQL":
                     services.AddHealthChecks()
-                        .AddNpgSql(configuration["ConnectionStrings:GloboTicketIdentityConnectionString"], tags: new[] {
+                        .AddNpgSql(configuration["ConnectionStrings3:GloboTicketIdentityConnectionString"], tags: new[] {
                             "db",
                             "all"})
                         .AddUrlGroup(new Uri(configuration["API:WeatertherInfo"]), tags: new[] {
@@ -43,11 +43,11 @@ namespace GloboTicket.TicketManagement.Api.Extensions
                         opt.MaximumHistoryEntriesPerEndpoint(60); //maximum history of checks
                         opt.SetApiMaxActiveRequests(1); //api requests concurrency
                         opt.AddHealthCheckEndpoint("API", "/healthz"); //map health check api
-                    }).AddPostgreSqlStorage(configuration["ConnectionStrings:GloboTicketHealthCheckConnectionString"]);
+                    }).AddPostgreSqlStorage(configuration["ConnectionStrings3:GloboTicketHealthCheckConnectionString"]);
                     break;
                 case "MySQL":
                     services.AddHealthChecks()
-                        .AddMySql(configuration["ConnectionStrings:GloboTicketIdentityConnectionString"], tags: new[] {
+                        .AddMySql(configuration["ConnectionStrings1:GloboTicketIdentityConnectionString"], tags: new[] {
                             "db",
                             "all"})
                         .AddUrlGroup(new Uri(configuration["API:WeatertherInfo"]), tags: new[] {
@@ -60,7 +60,7 @@ namespace GloboTicket.TicketManagement.Api.Extensions
                         opt.MaximumHistoryEntriesPerEndpoint(60); //maximum history of checks
                         opt.SetApiMaxActiveRequests(1); //api requests concurrency
                         opt.AddHealthCheckEndpoint("API", "/healthz"); //map health check api
-                    }).AddMySqlStorage(configuration["ConnectionStrings:GloboTicketHealthCheckConnectionString"]);
+                    }).AddMySqlStorage(configuration["ConnectionStrings1:GloboTicketHealthCheckConnectionString"]);
                     break;
                 case "SQLite":
                     services.AddHealthChecks()
