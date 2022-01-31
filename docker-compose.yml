@@ -20,7 +20,7 @@ services:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root
     ports:
-      - "5432:5432"
+      - "5430:5432"
     networks:
       - clean-network
 
@@ -29,7 +29,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
     ports:
-      - '3306:3306'
+      - '3307:3307'
     networks:
       - clean-network
   

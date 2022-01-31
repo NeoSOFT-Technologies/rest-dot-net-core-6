@@ -35,8 +35,8 @@ namespace GloboTicket.TicketManagement.gRPC.IntegrationTests.Base
                     identityBuilder.UseSqlServer(IdentityConnString);
                     break;
                 case "PGSQL":
-                    ApplicationConnString = $"Server=localhost;Port=5432;Database={ApplicationDbName};User Id=root;Password=root;CommandTimeout = 300;";
-                    IdentityConnString = $"Server=localhost;Port=5432;Database={IdentityDbName};User Id=root;Password=root;CommandTimeout = 300;";
+                    ApplicationConnString = $"Server=localhost;Port=5430;Database={ApplicationDbName};User Id=root;Password=root;CommandTimeout = 300;";
+                    IdentityConnString = $"Server=localhost;Port=5430;Database={IdentityDbName};User Id=root;Password=root;CommandTimeout = 300;";
                     AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
                     applicationBuilder.UseNpgsql(ApplicationConnString);
                     identityBuilder.UseNpgsql(IdentityConnString);
