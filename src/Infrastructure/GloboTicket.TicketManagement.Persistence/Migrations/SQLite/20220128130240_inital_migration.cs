@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace GloboTicket.TicketManagement.Persistence.Migrations.SQLITE
 {
+    [ExcludeFromCodeCoverage]
     public partial class inital_migration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
