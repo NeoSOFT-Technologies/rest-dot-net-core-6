@@ -50,14 +50,10 @@ namespace GloboTicket.TicketManagement.Application.UnitTests.Categories.Commands
         {
             var handler = new CreateCategoryCommandHandler(_mapper, _mockCategoryRepository.Object, _mockMessageRepository.Object);
 
-            var result = await handler.Handle(new CreateCategoryCommand() { Name = "" }, CancellationToken.None);
+            var result = await Should.ThrowAsync<Exceptions.ValidationException>(() => handler.Handle(new CreateCategoryCommand() { Name = "" }, CancellationToken.None));
 
             var allCategories = await _mockCategoryRepository.Object.ListAllAsync();
 
-            result.ShouldBeOfType<Response<CreateCategoryDto>>();
-            result.Succeeded.ShouldBe(false);
-            result.Errors.ShouldNotBeNull();
-            result.Errors[0].ToLower().ShouldBe("name is required.");
             allCategories.Count.ShouldBe(4);
         }
 
@@ -66,14 +62,9 @@ namespace GloboTicket.TicketManagement.Application.UnitTests.Categories.Commands
         {
             var handler = new CreateCategoryCommandHandler(_mapper, _mockCategoryRepository.Object, _mockMessageRepository.Object);
 
-            var result = await handler.Handle(new CreateCategoryCommand() { Name = "TEST123456780" }, CancellationToken.None);
+            var result = await Should.ThrowAsync<Exceptions.ValidationException>(() => handler.Handle(new CreateCategoryCommand() { Name = "TEST123456780" }, CancellationToken.None));
 
             var allCategories = await _mockCategoryRepository.Object.ListAllAsync();
-
-            result.ShouldBeOfType<Response<CreateCategoryDto>>();
-            result.Succeeded.ShouldBe(false);
-            result.Errors.ShouldNotBeNull();
-            result.Errors[0].ToLower().ShouldBe("name must not exceed 10 characters.");
             allCategories.Count.ShouldBe(4);
         }
     }
