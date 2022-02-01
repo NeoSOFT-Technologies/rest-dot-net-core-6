@@ -48,8 +48,8 @@ namespace GloboTicket.TicketManagement.gRPC.IntegrationTests.Base
                     identityBuilder.UseMySql(IdentityConnString, new MySqlServerVersion(new Version(8, 0, 11)));
                     break;
                 case "SQLite":
-                    ApplicationConnString = $"Data Source=..//db//{ApplicationDbName}";
-                    IdentityConnString = $"Data Source=..//db//{IdentityDbName}";
+                    ApplicationConnString = $"Data Source=..//..//..//db//{ApplicationDbName}";
+                    IdentityConnString = $"Data Source=..//..//..//db//{IdentityDbName}";
                     applicationBuilder.UseSqlite(ApplicationConnString);
                     identityBuilder.UseSqlite(IdentityConnString);
                     break;
