@@ -1,5 +1,5 @@
 # Database Setup
-![database1](https://user-images.githubusercontent.com/87525401/150757669-95681b75-3158-4a18-89a5-36517f95d90e.PNG)
+![SecretJson](https://user-images.githubusercontent.com/80381121/152146362-70b5a022-5699-440a-9b24-89a8a665fd8d.png)
 
 
 # Swagger
