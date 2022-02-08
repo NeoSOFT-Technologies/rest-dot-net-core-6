@@ -15,7 +15,7 @@ namespace GloboTicket.TicketManagement.Api.Controllers
         {
             _authenticationService = authenticationService;
         }
-
+        //test comment
         [HttpPost("authenticate")]
         public async Task<ActionResult<AuthenticationResponse>> AuthenticateAsync(AuthenticationRequest request)
         {
