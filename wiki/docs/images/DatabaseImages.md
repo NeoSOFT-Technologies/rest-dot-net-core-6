@@ -62,6 +62,7 @@
 ![SqliteDb](https://user-images.githubusercontent.com/87525401/153551370-57a6a492-e926-4fff-bead-1de5166a1560.PNG)
 ![HealthcheckExtension](https://user-images.githubusercontent.com/87525401/153553759-658be7c5-e6d5-45a2-92c0-8130f96bc276.png)
 ![IdentityService](https://user-images.githubusercontent.com/87525401/153554400-7e17c220-c235-4be5-943a-36c343443cf7.png)
+![PersistenceService](https://user-images.githubusercontent.com/87525401/153554993-22c0d961-e40b-4d7c-ab93-a7363bfa5a13.png)
 
 
 
