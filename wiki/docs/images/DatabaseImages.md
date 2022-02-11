@@ -64,6 +64,8 @@
 ![IdentityService](https://user-images.githubusercontent.com/87525401/153554400-7e17c220-c235-4be5-943a-36c343443cf7.png)
 ![PersistenceService](https://user-images.githubusercontent.com/87525401/153554993-22c0d961-e40b-4d7c-ab93-a7363bfa5a13.png)
 ![Dbfixture](https://user-images.githubusercontent.com/87525401/153555478-a53f32b5-3ea4-43c6-bc01-f3a1e398bf8f.png)
+![healthcheckui](https://user-images.githubusercontent.com/87525401/153557504-adb71107-f3bb-48b2-9656-6a26c811e349.png)
+
 
 
 
