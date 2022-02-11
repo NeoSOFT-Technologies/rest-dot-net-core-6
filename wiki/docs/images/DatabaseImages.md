@@ -63,6 +63,8 @@
 ![HealthcheckExtension](https://user-images.githubusercontent.com/87525401/153553759-658be7c5-e6d5-45a2-92c0-8130f96bc276.png)
 ![IdentityService](https://user-images.githubusercontent.com/87525401/153554400-7e17c220-c235-4be5-943a-36c343443cf7.png)
 ![PersistenceService](https://user-images.githubusercontent.com/87525401/153554993-22c0d961-e40b-4d7c-ab93-a7363bfa5a13.png)
+![Dbfixture](https://user-images.githubusercontent.com/87525401/153555478-a53f32b5-3ea4-43c6-bc01-f3a1e398bf8f.png)
+
 
 
 
