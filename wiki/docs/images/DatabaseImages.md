@@ -60,6 +60,7 @@
 ## SQLite
 ![sqlite](https://user-images.githubusercontent.com/87525401/153549387-2caff4b3-e246-406d-aba1-e8ec60aa2fc7.PNG)
 ![SqliteDb](https://user-images.githubusercontent.com/87525401/153551370-57a6a492-e926-4fff-bead-1de5166a1560.PNG)
+![HealthcheckExtension](https://user-images.githubusercontent.com/87525401/153553759-658be7c5-e6d5-45a2-92c0-8130f96bc276.png)
 
 
 
