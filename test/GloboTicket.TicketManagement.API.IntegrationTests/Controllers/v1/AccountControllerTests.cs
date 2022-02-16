@@ -9,6 +9,7 @@ using Xunit;
 
 namespace GloboTicket.TicketManagement.API.IntegrationTests.Controllers.v1
 {
+//test comment
     [Collection("Database")]
     public class AccountControllerTests : IClassFixture<CustomWebApplicationFactory>
     {
