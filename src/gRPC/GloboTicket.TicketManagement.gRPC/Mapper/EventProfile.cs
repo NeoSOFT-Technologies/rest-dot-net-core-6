@@ -5,9 +5,12 @@ using GloboTicket.TicketManagement.Application.Features.Events.Queries.GetEventD
 using GloboTicket.TicketManagement.Application.Features.Events.Queries.GetEventsList;
 using GloboTicket.TicketManagement.Application.Responses;
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace GloboTicket.TicketManagement.gRPC.Mapper
 {
+
+    [ExcludeFromCodeCoverage]
     public class EventProfile : Profile
     {
         public EventProfile()
