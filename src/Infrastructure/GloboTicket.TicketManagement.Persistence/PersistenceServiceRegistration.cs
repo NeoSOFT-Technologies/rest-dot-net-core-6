@@ -4,11 +4,14 @@ using GloboTicket.TicketManagement.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Diagnostics.CodeAnalysis;
 
 namespace GloboTicket.TicketManagement.Persistence
 {
     public static class PersistenceServiceRegistration
     {
+
+        [ExcludeFromCodeCoverage]
         public static IServiceCollection AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
         {
             var dbProvider = configuration.GetValue<string>("dbProvider");

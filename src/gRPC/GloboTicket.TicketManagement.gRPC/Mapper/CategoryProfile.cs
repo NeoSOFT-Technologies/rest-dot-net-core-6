@@ -5,11 +5,14 @@ using GloboTicket.TicketManagement.Application.Features.Categories.Queries.GetCa
 using GloboTicket.TicketManagement.Application.Responses;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace GloboTicket.TicketManagement.gRPC.Mapper
 {
+
+    [ExcludeFromCodeCoverage]
     public class CategoryProfile : Profile
     {
         public CategoryProfile()
