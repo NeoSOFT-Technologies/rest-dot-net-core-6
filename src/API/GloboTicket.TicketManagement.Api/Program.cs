@@ -35,9 +35,15 @@ IConfiguration configurationBuilder = new ConfigurationBuilder()
 
 Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(configurationBuilder)
+    .CreateBootstrapLogger().Freeze();
+
+new LoggerConfiguration()
+    .ReadFrom.Configuration(configurationBuilder)
     .CreateLogger();
 
-
+builder.Host.UseSerilog((ctx, lc) => lc
+        .WriteTo.Console()
+        .ReadFrom.Configuration(ctx.Configuration));
 
 
 
