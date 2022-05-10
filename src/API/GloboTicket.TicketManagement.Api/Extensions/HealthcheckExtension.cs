@@ -13,7 +13,7 @@ namespace GloboTicket.TicketManagement.Api.Extensions
             {
                 case "MSSQL":
                     services.AddHealthChecks()
-                        .AddSqlServer(configuration["ConnectionStringsMSSQL:GloboTicketIdentityConnectionString"], tags: new[] {
+                        .AddSqlServer(configuration["ConnectionStrings:GloboTicketIdentityConnectionString"], tags: new[] {
                             "db",
                             "all"})
                         .AddUrlGroup(new Uri(configuration["API:WeatertherInfo"]), tags: new[] {
@@ -26,7 +26,7 @@ namespace GloboTicket.TicketManagement.Api.Extensions
                         opt.MaximumHistoryEntriesPerEndpoint(60); //maximum history of checks
                         opt.SetApiMaxActiveRequests(1); //api requests concurrency
                         opt.AddHealthCheckEndpoint("API", "/healthz"); //map health check api
-                    }).AddSqlServerStorage(configuration["ConnectionStringsMSSQL:GloboTicketHealthCheckConnectionString"]);
+                    }).AddSqlServerStorage(configuration["ConnectionStrings:GloboTicketHealthCheckConnectionString"]);
                     break;
                 case "PGSQL":
                     services.AddHealthChecks()

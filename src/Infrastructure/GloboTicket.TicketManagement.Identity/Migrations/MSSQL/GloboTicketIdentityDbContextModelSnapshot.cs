@@ -124,15 +124,15 @@ namespace GloboTicket.TicketManagement.Identity.Migrations.MSSQL
                     b.HasData(
                         new
                         {
-                            Id = "5cf6b091-ef3e-4d85-84f3-a11ffb2e2416",
-                            ConcurrencyStamp = "af2ace2a-2ae7-4b22-af75-daa445ae29b1",
+                            Id = "802d6486-c465-477f-864b-0831cd3c74b7",
+                            ConcurrencyStamp = "4c4caf3a-d238-4528-9411-013090b4f156",
                             Name = "Viewer",
                             NormalizedName = "VIEWER"
                         },
                         new
                         {
-                            Id = "d43cc707-d956-4403-bd3b-5dace922e2c1",
-                            ConcurrencyStamp = "49f59689-aa92-4ecb-8069-955edfc1acbe",
+                            Id = "e2589fbe-207b-4ec3-aef0-3e1ce85901b2",
+                            ConcurrencyStamp = "644c62b7-2701-49ca-b1c5-53b43cd6034a",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });
@@ -251,11 +251,9 @@ namespace GloboTicket.TicketManagement.Identity.Migrations.MSSQL
                             b1.Property<string>("ApplicationUserId")
                                 .HasColumnType("nvarchar(450)");
 
-                            b1.Property<int>("Id")
+                            b1.Property<Guid>("Id")
                                 .ValueGeneratedOnAdd()
-                                .HasColumnType("int");
-
-                            SqlServerPropertyBuilderExtensions.UseIdentityColumn(b1.Property<int>("Id"), 1L, 1);
+                                .HasColumnType("uniqueidentifier");
 
                             b1.Property<DateTime>("Created")
                                 .HasColumnType("datetime2");
