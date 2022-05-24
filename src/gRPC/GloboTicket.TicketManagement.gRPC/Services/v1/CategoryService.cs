@@ -14,7 +14,7 @@ namespace GloboTicket.TicketManagement.gRPC.Services.v1
     {
         private readonly IMediator _mediator;
         private readonly IMapper _mapper;
-        readonly ILogger _logger;
+        //readonly ILogger _logger;
         public CategoryService(IMediator mediator, IMapper mapper)
         {
             _mediator = mediator;
