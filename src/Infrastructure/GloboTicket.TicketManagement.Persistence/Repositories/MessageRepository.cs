@@ -3,14 +3,9 @@ using GloboTicket.TicketManagement.Application.Contracts.Persistence;
 using GloboTicket.TicketManagement.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace GloboTicket.TicketManagement.Persistence.Repositories
 {
-    [ExcludeFromCodeCoverage]
     public class MessageRepository : BaseRepository<Message>, IMessageRepository
     {
         private readonly string cacheKey = $"{typeof(Message)}";
